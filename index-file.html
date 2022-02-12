@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script type="text/javascript">
+        var apiUrl = 'https://jsonplaceholder.typicode.com/users';
+        function getData() {
+            fetch(apiUrl).then(response => {
+                return response.json();
+            }).then(data => {
+                // Work with JSON data here
+                console.log(data);
+                document.write(JSON.stringify(data));
+            }).catch(err => {
+                // Do something for an error here
+            })
+        }
+
+    </script>
+<button type="button" onclick="getData()">Click To Get Records</button>
+
+</body>
+
+</html>
